@@ -1,6 +1,7 @@
 package org.example.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -9,7 +10,7 @@ public class FrenchRestaurant implements Restaurant {
     private Chef chef;
 
     @Autowired
-    public FrenchRestaurant(Chef chef) {
+    public FrenchRestaurant(@Qualifier("davidChef") Chef chef) {
         this.chef = chef;
     }
 

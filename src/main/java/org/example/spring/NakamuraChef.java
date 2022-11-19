@@ -1,5 +1,8 @@
 package org.example.spring;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class NakamuraChef implements Chef {
     @Override
     public void cook() {
