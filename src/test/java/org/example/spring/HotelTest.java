@@ -9,7 +9,9 @@ class HotelTest {
     @Test
     void hotelTest() {
 
-        Hotel hotel = new Hotel();
+        Container con = new Container();
+
+        Hotel hotel = con.hotel();
 
         hotel.service();
 

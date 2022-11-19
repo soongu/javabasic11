@@ -1,8 +1,12 @@
 package org.example.spring;
 
-public class KoreanRestaurant {
+public class KoreanRestaurant implements Restaurant {
 
-    private KimChef chef = new KimChef();
+    private Chef chef;
+
+    public KoreanRestaurant(Chef chef) {
+        this.chef = chef;
+    }
 
     public void order() {
         System.out.println("한식을 주문합니다.");
